@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, FileText, Mail, Search, TerminalSquare } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./icons/BrandIcons";
+import { GithubIcon, LinkedinIcon, LeetCodeMark } from "./icons/BrandIcons";
 import { navItems } from "../data/navigation";
 import { scrollToSection } from "../lib/scroll";
 import { profile } from "../data/profile";
@@ -196,7 +196,7 @@ export function CommandPalette({ open, onClose }: CommandPaletteProps) {
                     <span className="flex items-center gap-2">
                       {cmd.id === "github" && <GithubIcon size={14} />}
                       {cmd.id === "linkedin" && <LinkedinIcon size={14} />}
-                      {cmd.id === "leetcode" && <ArrowRight size={14} />}
+                      {cmd.id === "leetcode" && <LeetCodeMark size={14} />}
                       {cmd.id === "email" && <Mail size={14} />}
                       {cmd.id === "resume" && <FileText size={14} />}
                       {cmd.id.startsWith("project-") && <ArrowRight size={14} />}

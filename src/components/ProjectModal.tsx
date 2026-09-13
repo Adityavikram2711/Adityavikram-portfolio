@@ -50,14 +50,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <div className="space-y-8 px-6 py-6">
-              <p className="text-ink-dim">{project.description}</p>
+              <p className="text-ink-secondary">{project.description}</p>
 
               {project.details.map((detail) => (
                 <div key={detail.label}>
                   <h4 className="mb-2 font-mono text-xs uppercase tracking-widest text-ink-faint">{detail.label}</h4>
                   <ul className="space-y-2">
                     {detail.content.map((line, i) => (
-                      <li key={i} className="flex gap-2.5 text-sm text-ink-dim">
+                      <li key={i} className="flex gap-2.5 text-sm text-ink-secondary">
                         <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-blue" />
                         <span>{line}</span>
                       </li>

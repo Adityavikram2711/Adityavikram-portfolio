@@ -24,7 +24,7 @@ export function SectionHeading({ index, label, title, description, align = "left
       </div>
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-ink">{title}</h2>
       {description && (
-        <p className={`mt-4 max-w-2xl text-base md:text-lg text-ink-dim ${align === "center" ? "mx-auto" : ""}`}>
+        <p className={`mt-4 max-w-2xl text-base md:text-lg text-ink-secondary ${align === "center" ? "mx-auto" : ""}`}>
           {description}
         </p>
       )}

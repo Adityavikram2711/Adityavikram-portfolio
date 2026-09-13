@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, FileText } from "lucide-react";
+import { ArrowRight, ChevronDown, FileText } from "lucide-react";
 import { profile } from "../data/profile";
 import { leetcodeUrl } from "../data/problemSolving";
 import { GridBackground } from "../components/GridBackground";
@@ -11,11 +11,11 @@ import { scrollToSection } from "../lib/scroll";
 import { GithubIcon, LinkedinIcon, LeetCodeMark } from "../components/icons/BrandIcons";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.12 * i, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+    transition: { delay: 0.1 * i, duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
   }),
 };
 
@@ -26,19 +26,19 @@ export function Hero() {
     <section
       id="home"
       ref={heroRef}
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5 pt-28 pb-16 md:px-8"
+      className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5 pb-20 pt-28 md:px-8"
     >
       <GridBackground />
       <SystemMap containerRef={heroRef} />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_320px] lg:gap-10">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl">
           <motion.p
             custom={0}
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mb-6 font-mono text-xs tracking-[0.14em] text-accent-blue"
+            className="mb-5 font-mono text-xs tracking-[0.14em] text-accent-blue"
           >
             {profile.eyebrow}
           </motion.p>
@@ -48,10 +48,9 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="font-bold uppercase leading-[0.95] tracking-[-0.04em] text-ink text-[clamp(2.75rem,calc(35.5px+2.2vw),4.1875rem)]"
+            className="text-3xl font-semibold leading-tight tracking-tight text-ink-secondary sm:text-4xl md:text-5xl"
           >
-            <span className="block">{profile.firstName}</span>
-            <span className="block text-ink-dim">{profile.lastName}</span>
+            Hi, I'm <span className="text-gradient font-bold">{profile.name}</span>.
           </motion.h1>
 
           <motion.p
@@ -59,9 +58,9 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-6 font-bold leading-[1.12] tracking-[-0.022em] text-[clamp(1.75rem,calc(24.7px+0.86vw),2.3125rem)]"
+            className="mt-5 text-lg font-medium leading-snug text-ink sm:text-xl"
           >
-            <span className="block text-gradient">{profile.headline}</span>
+            {profile.headline}
           </motion.p>
 
           <motion.p
@@ -69,12 +68,12 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-5 max-w-[680px] text-base leading-[1.6] text-ink-dim sm:text-lg"
+            className="mt-4 max-w-xl text-base leading-relaxed text-ink-secondary"
           >
             {profile.subheadline}
           </motion.p>
 
-          <motion.div custom={4} initial="hidden" animate="show" variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
+          <motion.div custom={4} initial="hidden" animate="show" variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
             <Button onClick={() => scrollToSection("projects")} icon={<ArrowRight size={16} />}>
               View My Work
             </Button>
@@ -95,7 +94,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-8 flex items-center gap-4 text-ink-faint"
+            className="mt-7 flex items-center gap-4 text-ink-dim"
           >
             <a
               href={profile.socials.github}
@@ -138,6 +137,18 @@ export function Hero() {
           <TerminalWidget />
         </motion.div>
       </div>
+
+      <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.9 }}
+        onClick={() => scrollToSection("about")}
+        aria-label="Scroll to About section"
+        className="absolute inset-x-0 bottom-8 z-10 mx-auto flex w-fit flex-col items-center gap-2 text-ink-faint transition-colors hover:text-ink-dim"
+      >
+        <span className="font-mono text-[11px] uppercase tracking-[0.14em]">Scroll to explore</span>
+        <ChevronDown size={16} />
+      </motion.button>
     </section>
   );
 }

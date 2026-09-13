@@ -27,7 +27,7 @@ export function Experience() {
                 <p className="mt-1 text-sm text-ink-dim">{item.organization}</p>
                 <ul className="mt-4 space-y-2">
                   {item.points.map((point, j) => (
-                    <li key={j} className="flex gap-2.5 text-sm text-ink-dim">
+                    <li key={j} className="flex gap-2.5 text-sm text-ink-secondary">
                       <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-cyan" />
                       <span>{point}</span>
                     </li>

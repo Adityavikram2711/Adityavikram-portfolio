@@ -39,11 +39,11 @@ export function ProjectCard({ project, featured = false, onOpen }: ProjectCardPr
       </div>
 
       <h3 className={`font-bold text-ink ${featured ? "text-2xl md:text-3xl" : "text-xl"}`}>{project.name}</h3>
-      <p className={`mt-3 text-ink-dim ${featured ? "text-base" : "text-sm"}`}>{project.tagline}</p>
+      <p className={`mt-3 text-ink-secondary ${featured ? "text-base" : "text-sm"}`}>{project.tagline}</p>
 
       <ul className="mt-5 space-y-2">
         {project.highlights.slice(0, featured ? 4 : 2).map((h, i) => (
-          <li key={i} className="flex gap-2.5 text-sm text-ink-dim">
+          <li key={i} className="flex gap-2.5 text-sm text-ink-secondary">
             <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent-cyan" />
             <span className={featured ? "" : "line-clamp-2"}>{h}</span>
           </li>

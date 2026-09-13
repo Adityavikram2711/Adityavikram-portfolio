@@ -11,7 +11,8 @@
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-strong: rgba(255, 255, 255, 0.14);
 
-  --color-ink: #eef1f6;
+  --color-ink: #f5f7fa;
+  --color-ink-secondary: #c7cdd6;
   --color-ink-dim: #9aa4b2;
   --color-ink-faint: #636d7b;
 

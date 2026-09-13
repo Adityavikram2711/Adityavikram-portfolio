@@ -18,7 +18,7 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-base leading-relaxed text-ink-dim md:text-lg"
+                className="text-base leading-relaxed text-ink-secondary md:text-lg"
               >
                 {paragraph}
               </motion.p>

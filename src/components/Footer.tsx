@@ -1,6 +1,7 @@
-import { Mail } from "lucide-react";
+import { ArrowUp, Mail } from "lucide-react";
 import { profile } from "../data/profile";
 import { leetcodeUrl } from "../data/problemSolving";
+import { scrollToSection } from "../lib/scroll";
 import { GithubIcon, LinkedinIcon, LeetCodeMark } from "./icons/BrandIcons";
 
 export function Footer() {
@@ -29,7 +30,16 @@ export function Footer() {
           </a>
         </div>
 
-        <p className="font-mono text-xs text-ink-faint">© 2026 {profile.name}</p>
+        <div className="flex flex-col items-center gap-2 sm:items-end">
+          <button
+            onClick={() => scrollToSection("home")}
+            className="inline-flex items-center gap-1.5 font-mono text-xs text-ink-faint transition-colors hover:text-ink-dim"
+          >
+            <ArrowUp size={12} />
+            Back to top
+          </button>
+          <p className="font-mono text-xs text-ink-faint">© 2026 {profile.name}</p>
+        </div>
       </div>
     </footer>
   );
