@@ -7,10 +7,15 @@ interface MapNode {
   y: number;
 }
 
+// A distributed network occupying the right-hand background of the Hero,
+// around and behind the terminal. SYSTEMS is the conceptual hub — kept above
+// and left of the terminal with real breathing room, rather than crowded
+// against it. A line passing behind the terminal is fine; the terminal is a
+// foreground element and is allowed to naturally obscure the background map.
 const NODES: MapNode[] = [
   { id: "dsa", label: "DSA", x: 0.72, y: 0.1 },
   { id: "cpp", label: "C++", x: 0.64, y: 0.28 },
-  { id: "systems", label: "SYSTEMS", x: 0.8, y: 0.36 },
+  { id: "systems", label: "SYSTEMS", x: 0.74, y: 0.3 },
   { id: "networking", label: "Networking", x: 0.96, y: 0.24 },
   { id: "fullstack", label: "Full-Stack", x: 0.6, y: 0.74 },
   { id: "devops", label: "DevOps", x: 0.91, y: 0.66 },
