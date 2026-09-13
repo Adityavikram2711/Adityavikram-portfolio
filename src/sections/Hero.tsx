@@ -38,7 +38,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mb-4 font-mono text-xs tracking-widest text-accent-blue"
+            className="mb-6 font-mono text-xs tracking-[0.14em] text-accent-blue"
           >
             {profile.eyebrow}
           </motion.p>
@@ -48,7 +48,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="font-semibold uppercase leading-[1.02] tracking-[0.04em] text-ink text-[clamp(2.75rem,6vw,5rem)]"
+            className="font-bold uppercase leading-[0.95] tracking-[-0.04em] text-ink text-[clamp(2.75rem,calc(35.5px+2.2vw),4.1875rem)]"
           >
             <span className="block">{profile.firstName}</span>
             <span className="block text-ink-dim">{profile.lastName}</span>
@@ -59,7 +59,7 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-4 font-bold leading-[1.15] tracking-tight text-[clamp(2rem,4vw,3.4rem)]"
+            className="mt-6 font-bold leading-[1.12] tracking-[-0.022em] text-[clamp(1.75rem,calc(24.7px+0.86vw),2.3125rem)]"
           >
             <span className="block text-gradient">{profile.headline}</span>
           </motion.p>
@@ -69,12 +69,12 @@ export function Hero() {
             initial="hidden"
             animate="show"
             variants={fadeUp}
-            className="mt-5 max-w-xl text-base text-ink-dim sm:text-lg"
+            className="mt-5 max-w-[680px] text-base leading-[1.6] text-ink-dim sm:text-lg"
           >
             {profile.subheadline}
           </motion.p>
 
-          <motion.div custom={4} initial="hidden" animate="show" variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
+          <motion.div custom={4} initial="hidden" animate="show" variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
             <Button onClick={() => scrollToSection("projects")} icon={<ArrowRight size={16} />}>
               View My Work
             </Button>
