@@ -1,0 +1,54 @@
+name: Update coding stats
+
+on:
+  schedule:
+    # 03:00 UTC daily
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-coding-stats
+  cancel-in-progress: false
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run coding stats updater
+        run: node scripts/update-coding-stats.js
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- src/data/coding-stats.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push updated stats
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/coding-stats.json
+          git commit -m "chore: update coding stats [skip ci]"
+          git push
+
+      - name: No changes
+        if: steps.diff.outputs.changed == 'false'
+        run: echo "coding-stats.json is already up to date — nothing to commit."

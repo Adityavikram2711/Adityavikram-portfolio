@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { leetcodeBreakdown, leetcodeUrl, practiceAreas, problemSolvingStats } from "../data/problemSolving";
+import {
+  leetcodeBreakdown,
+  leetcodeUrl,
+  practiceAreas,
+  problemSolvingStats,
+  statsLastUpdated,
+} from "../data/problemSolving";
 import { SectionHeading } from "../components/SectionHeading";
 import { Badge } from "../components/Badge";
+
+const formattedUpdateDate = new Date(statsLastUpdated).toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+});
 
 export function ProblemSolving() {
   return (
@@ -32,7 +44,9 @@ export function ProblemSolving() {
           ))}
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <p className="mt-3 text-right font-mono text-[11px] text-ink-faint">Updated {formattedUpdateDate}</p>
+
+        <div className="mt-5 grid grid-cols-1 gap-6 md:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

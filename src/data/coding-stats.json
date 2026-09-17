@@ -1,0 +1,58 @@
+{
+  "lastUpdated": "2026-09-17T19:52:55.239Z",
+  "leetcode": {
+    "username": "Adityavikram2711",
+    "profileUrl": "https://leetcode.com/u/Adityavikram2711/",
+    "maxRating": 1860,
+    "problemsSolved": 513,
+    "languages": [
+      {
+        "name": "C++",
+        "count": 475
+      },
+      {
+        "name": "Java",
+        "count": 32
+      },
+      {
+        "name": "MySQL",
+        "count": 13
+      },
+      {
+        "name": "C",
+        "count": 1
+      }
+    ],
+    "badges": 10,
+    "badgeNames": [
+      "Knight",
+      "200 Days Badge 2026",
+      "100 Days Badge 2026",
+      "50 Days Badge 2026",
+      "Aug LeetCoding Challenge",
+      "Jul LeetCoding Challenge",
+      "Jun LeetCoding Challenge",
+      "May LeetCoding Challenge",
+      "Apr LeetCoding Challenge",
+      "Mar LeetCoding Challenge"
+    ],
+    "practiceAreas": [
+      "Array",
+      "String",
+      "Math",
+      "Hash Table",
+      "Sorting",
+      "Two Pointers",
+      "Dynamic Programming",
+      "Greedy",
+      "Matrix"
+    ]
+  },
+  "codechef": {
+    "username": "hardy_sheep_38",
+    "profileUrl": "https://www.codechef.com/users/hardy_sheep_38",
+    "maxRating": 1544,
+    "stars": 2,
+    "problemsSolved": 28
+  }
+}
