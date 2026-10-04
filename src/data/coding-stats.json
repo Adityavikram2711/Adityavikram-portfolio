@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-10-03T08:50:10.849Z",
+  "lastUpdated": "2026-10-04T09:17:35.974Z",
   "leetcode": {
     "username": "Adityavikram2711",
     "profileUrl": "https://leetcode.com/u/Adityavikram2711/",
     "maxRating": 1860,
-    "problemsSolved": 535,
+    "problemsSolved": 536,
     "languages": [
       {
         "name": "C++",
-        "count": 488
+        "count": 489
       },
       {
         "name": "Java",
@@ -43,8 +43,8 @@
       "Math",
       "Hash Table",
       "Sorting",
-      "Two Pointers",
       "Dynamic Programming",
+      "Two Pointers",
       "Greedy",
       "Matrix"
     ]
