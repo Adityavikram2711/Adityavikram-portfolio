@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-10-30T09:33:57.108Z",
+  "lastUpdated": "2026-10-31T09:15:20.555Z",
   "leetcode": {
     "username": "Adityavikram2711",
     "profileUrl": "https://leetcode.com/u/Adityavikram2711/",
     "maxRating": 1860,
-    "problemsSolved": 559,
+    "problemsSolved": 560,
     "languages": [
       {
         "name": "C++",
-        "count": 512
+        "count": 513
       },
       {
         "name": "Java",
