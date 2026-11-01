@@ -1,14 +1,14 @@
 {
-  "lastUpdated": "2026-10-31T09:15:20.555Z",
+  "lastUpdated": "2026-11-01T10:01:34.932Z",
   "leetcode": {
     "username": "Adityavikram2711",
     "profileUrl": "https://leetcode.com/u/Adityavikram2711/",
     "maxRating": 1860,
-    "problemsSolved": 560,
+    "problemsSolved": 561,
     "languages": [
       {
         "name": "C++",
-        "count": 513
+        "count": 514
       },
       {
         "name": "Java",
@@ -23,12 +23,13 @@
         "count": 1
       }
     ],
-    "badges": 11,
+    "badges": 12,
     "badgeNames": [
       "Knight",
       "200 Days Badge 2026",
       "100 Days Badge 2026",
       "50 Days Badge 2026",
+      "Oct LeetCoding Challenge",
       "Sep LeetCoding Challenge",
       "Aug LeetCoding Challenge",
       "Jul LeetCoding Challenge",
